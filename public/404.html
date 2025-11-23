@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>heritage-black-design — 404</title>
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; display:flex; align-items:center; justify-content:center; height:100vh; margin:0; background:#0b0b0b; color:#fff; }
+    .card { text-align:center; max-width:680px; padding:2rem; border-radius:8px; background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01)); box-shadow:0 6px 24px rgba(0,0,0,0.6); }
+    a { color:#9be7ff; text-decoration:none; }
+    small { color:#9aa0a6; display:block; margin-top:1rem; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Page not found</h1>
+    <p>This is a fallback page for client-side routing. It should load the app shell so the SPA router can take over.</p>
+    <p><a href="/">Go to homepage</a></p>
+    <small>If your app has a built index.html, copy it here so routing works correctly on GitHub Pages.</small>
+  </div>
+  <!-- Optional script to try to load index.html from the site root for SPAs that don't bundle the app here. -->
+  <script>
+    // Attempt to fetch /index.html and replace the current document with it so the SPA router can handle the route.
+    (function(){
+      if (window.location.pathname !== '/' ) {
+        fetch('/index.html').then(function(res){
+          if (res.ok) return res.text();
+          throw new Error('index not found');
+        }).then(function(html){
+          document.open(); document.write(html); document.close();
+        }).catch(function(){ /* leave 404 content */ });
+      }
+    })();
+  </script>
+</body>
+</html>
