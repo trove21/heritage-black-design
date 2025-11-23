@@ -24,6 +24,10 @@ All colors MUST be HSL.
     --primary-foreground: 0 0% 100%;
     --primary-hover: 160 33% 24%;
 
+    /* Additional Concept Colors */
+    --gold: 35 35% 61%;
+    --copper: 153 20% 49%;
+
     --secondary: 0 0% 100% / 0.05;
     --secondary-foreground: 0 0% 100%;
 
